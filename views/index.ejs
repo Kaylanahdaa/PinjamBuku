@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+              <li>
+                <a href="/home">
+                    <span class="icon"><ion-icon name="book"></ion-icon> 
+                    </span>
+                    <h2>PinjamBuku</h2>
+                </a>
+            </li>
+                <li>
+                    <a href="/search">
+                        <span class="icon">
+                            <ion-icon name="bookmarks"></ion-icon>
+                        </span>
+                        <span class="title">Search Book</span>
+                    </a>
+                </li>
+  
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="people"></ion-icon>
+                        </span>
+                        <span class="title">Data Peminjam</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+  
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                
+                <div class="cardHeader">
+                    <h2>APLIKASI PINJAM BUKU</h2>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Daftar Data</h2>
+                        <a href="/add_user" class="btn">Tambah Data</a>
+                    </div>
+                    <!-- <form action="/" method="POST"> -->
+                     <form action="/" method="POST">
+                        <table>
+                        <thead>
+                            <tr>
+                                <td>NO</td>
+                                <td>ID </td>
+                                <td>Nama</td>
+                                <td>Email</td>
+                                <td>Gender</td>
+                                <td>Hewan</td>
+                                <td>Kondisi Hewan</td>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <% for(var i = 0; i < users.length; i++) { %>
+                                <tr>
+                                    <td><%= i + 1 %></td>
+                                    <td><%= users[i].id %></td>
+                                    <td><%= users[i].nama %></td>
+                                    <td><%= users[i].email %></td>
+                                    <td><%= users[i].hewan %></td>
+                                    <td><%= users[i].nama_hewan %></td>
+                                    <td><%= users[i].kondisi %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                        </table>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="./js/main.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  
+</body>
+
+</html>
